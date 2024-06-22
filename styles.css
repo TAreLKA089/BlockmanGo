@@ -1,0 +1,185 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    cursor: url('idle.cur'), auto; /* Укажите путь к вашему локальному файлу курсора */
+    font-family: Arial, sans-serif;
+    display: flex;
+    animation: fadeIn 0.5s ease-out;
+}
+@keyframes Test {
+	0%   { background: #333333; }
+	50%   { background: #3535a4; }
+	100%  { background: #00d4ff; }
+}
+body {
+	background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(29,29,181,1) 100%);
+    width: 100%;
+}
+
+h1 {
+	font-family: Tahoma;
+    color: white; /* Делаем текст прозрачным */
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
+    text-align: center; /* Выравниваем текст по центру внутри блока */
+    font-size: 4em; /* Например, установить размер в 2 раза больше базового размера */
+}
+
+.large-image {
+    width: 120px; /* Установите ширину, которая увеличит изображение */
+    height: auto; /* Высота будет автоматически подстроена для сохранения пропорций */
+}
+
+.mail {
+    position: absolute; /* Абсолютное позиционирование для текста */
+    bottom: 0; /* Выравниваем по нижнему краю */
+    right: 0; /* Выравниваем по правому краю */
+    cursor: url(select.cur), default;
+    width: 45px; /* Установите ширину, которая увеличит изображение */
+    height: auto; /* Высота будет автоматически подстроена для сохранения пропорций */
+}
+
+h2 {
+    display: flex;
+    justify-content: center; /* Центрируем содержимое по горизонтали */
+    align-items: center; /* Центрируем содержимое по вертикали */
+    text-align: center; /* Выравниваем текст (если есть) по центру */
+}
+
+/* Увеличить размер текста в p */
+p {
+	font-family: Tahoma;
+    color: #3efb0a; /* Делаем текст прозрачным */
+    text-shadow:
+        -1px -1px 0 #000, /* тень слева вверху */
+        1px -1px 0 #000, /* тень справа вверху */
+        -1px 1px 0 #000, /* тень слева внизу */
+        1px 1px 0 #000; /* тень справа внизу */
+    font-size: 28px; /* Например, установить размер 18 пикселей */
+}
+
+z1 {
+	font-family: Tahoma;
+    color: white; /* Делаем текст прозрачным */
+    text-shadow:
+        -1px -1px 0 #000, /* тень слева вверху */
+        1px -1px 0 #000, /* тень справа вверху */
+        -1px 1px 0 #000, /* тень слева внизу */
+        1px 1px 0 #000; /* тень справа внизу */
+    font-size: 24px; /* Например, установить размер 18 пикселей */
+    display: block;
+    margin-bottom: 10px; /* Отступ между каждым сообщением */
+    border-bottom: 3px solid #1f2b45; /* Линия-разделитель */
+    padding-bottom: 5px; /* Отступ снизу от линии */
+}
+
+z2 {
+	font-family: Tahoma;
+    color: #ff0000; /* Делаем текст прозрачным */
+    text-shadow:
+        -1px -1px 0 #000, /* тень слева вверху */
+        1px -1px 0 #000, /* тень справа вверху */
+        -1px 1px 0 #000, /* тень слева внизу */
+        1px 1px 0 #000; /* тень справа внизу */
+    font-size: 41px; /* Например, установить размер 18 пикселей */
+    margin-bottom: 15px; /* Отступ между каждым сообщением */
+    border-bottom: 5px solid #1f2b45; /* Линия-разделитель */
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    border-left: 3px solid #1f2b45;
+    background-color: #1f2b45;
+	background: #2d3e63;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.5s ease;
+    transform: translateX(0);
+}
+
+.sidebar.closed {
+    transform: translateX(-100%);
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.sidebar-header {
+    font-size: 1em; /* Например, установить размер в 2 раза больше базового размера */
+    padding: 20px;
+    background-color: #182541;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-btn {
+    cursor: url(select.cur), default;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.sidebar-menu li {
+    cursor: url(select.cur), default;
+    padding: 15px 20px;
+    border-bottom: 3px solid #182541; /* Рамка снизу */
+}
+
+.sidebar-menu li:first-child {
+    border-top: 3px solid #182541; /* Рамка сверху для первого пункта */
+}
+
+.sidebar-menu li a {
+    cursor: url(select.cur), default;
+    color: white;
+    text-decoration: none;
+    display: block;
+    background-color: #2d3e63; /* Задний фон */
+}
+
+.sidebar-menu li a:hover {
+    cursor: url(select.cur), default;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    flex-grow: 1;
+    transition: margin-left 0.3s ease;
+}
+
+.content.shifted {
+    margin-left: 0;
+}
+
+.open-btn {
+    cursor: url(hand.cur), default;
+    display: none;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.open-btn.show {
+    cursor: url(select.cur), default;
+    display: block;
+}

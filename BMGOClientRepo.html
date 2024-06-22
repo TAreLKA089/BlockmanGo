@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blockman Go PC Repository Archive</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+		@keyframes Test {
+			0%   { background: #4a4a4a; }
+			25%   { background: #212120; }
+			50%  { background: #75858f; }
+			75%  { background: #354f52; }
+			100%  { background: #4a4a4a; }
+		}
+		@keyframes fadeIn {
+			0% { opacity: 0; transform: translateY(-20px); }
+			100% { opacity: 1; transform: translateY(0); }
+		}
+        body {
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+            display: grid;
+			animation: Test 30s infinite linear;
+            grid-template-columns: auto 1fr;
+            grid-template-rows: auto 1fr;
+            justify-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Tahoma;
+		    font-size: 2.5em
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: white;
+            cursor: url(idle.cur), default;
+        }
+		body::before {
+			animation: fadeIn 0.5s ease-out;
+			content: "";
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.3);
+			backdrop-filter: blur(50px);
+			z-index: -1;
+		}
+        h1 {
+			animation: fadeIn 0.5s ease-out;
+            grid-column: 1 / -1;
+            text-align: center;
+            margin: 20px 0;
+			font-size: 6.5em
+            cursor: url(hand.cur), default;
+        }
+        h5 a {
+			animation: TextAnimation 5s infinite forwards;
+			font-size: 6.5em
+			top: 0;
+			left: 0;
+            cursor: url(hand.cur), default;
+        }
+		.top-left {
+			position: fixed;
+			top: 0;
+			left: 0;
+			padding: 20px;
+		}
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            align-self: start;
+            justify-self: start;
+            display: flex;
+            flex-wrap: wrap; 
+            gap: 10px;
+            justify-content: center; 
+        }
+		@keyframes borderAnimation {
+			0%   { border-color: #ff6347; }
+			25%  { border-color: #7fff00; }
+			50%  { border-color: #00bfff; }
+			75%  { border-color: #ff1493; }
+			100% { border-color: #ff6347; }
+		}
+		@keyframes TextAnimation {
+			0%   { color: #ff6347; }
+			25%  { color: #7fff00; }
+			50%  { color: #00bfff; }
+			75%  { color: #ff1493; }
+			100% { color: #ff6347; }
+		}
+        li {
+			animation: borderAnimation 10s infinite linear;
+            border: 1px solid red; 
+            border-radius: 5px; 
+            background-color: black; 
+            width: 250px; 
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 10px; 
+            cursor: url(select.cur), default;
+        }
+        li:hover {
+			animation: TextAnimation 5s infinite forwards;
+        }
+
+        body:hover {
+            cursor: url(idle.cur), default;
+        }
+
+        .cube-container {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            transform-style: preserve-3d;
+            animation: rotateCube 10s linear infinite;
+            z-index: -1;
+            top: 35%;
+        }
+
+        .cube-face {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border: 2px solid transparent;
+            opacity: 0.8;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .cube-face:nth-child(1) { transform: translateZ(100px) rotateY(0deg); background-image: url('top.png'); }
+        .cube-face:nth-child(2) { transform: rotateY(90deg) translateZ(100px); background-image: url('1_2_4.png'); }
+        .cube-face:nth-child(3) { transform: rotateY(180deg) translateZ(100px); background-image: url('back.png'); }
+        .cube-face:nth-child(4) { transform: rotateY(-90deg) translateZ(100px); background-image: url('1_2.png'); }
+        .cube-face:nth-child(5) { transform: rotateX(90deg) translateZ(100px) rotateY(0deg); background-image: url('1_3.png'); }
+        .cube-face:nth-child(6) { transform: rotateX(-90deg) translateZ(100px) rotateY(0deg); background-image: url('1.png'); }
+
+        @keyframes rotateCube {
+            0% { transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg); }
+            100% { transform: rotateY(360deg) rotateX(360deg) rotateZ(360deg); }
+        }
+    </style>
+</head>
+<body>
+	<div class="top-left">
+	<h5><a href="index.html">Back>></a></h5>
+	</div>
+    <h1>Blockman Go PC Versions Repository Archive</h1>
+    <ul id="artifact-list">
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10072/client.zip';">10072</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10073/client.zip';">10073</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10074/client.zip';">10074</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10075/client.zip';">10075</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10076/client.zip';">10076</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10077/client.zip';">10077</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10078/client.zip';">10078</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10079/client.zip';">10079</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10080/client.zip';">10080</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10081/client.zip';">10081</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10082/client.zip';">10082</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10083/client.zip';">10083</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10084/client.zip';">10084</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10085/client.zip';">10085</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10086/client.zip';">10086</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10087/client.zip';">10087</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10088/client.zip';">10088</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10089/client.zip';">10089</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10090/client.zip';">10090</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10091/client.zip';">10091</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10092/client.zip';">10092</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10093/client.zip';">10093</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10094/client.zip';">10094</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10095/client.zip';">10095</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10096/client.zip';">10096</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10097/client.zip';">10097</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10098/client.zip';">10098</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10099/client.zip';">10099</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10100/client.zip';">10100</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10101/client.zip';">10101</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10102/client.zip';">10102</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10103/client.zip';">10103</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10104/client.zip';">10104</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10105/client.zip';">10105</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10106/client.zip';">10106</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10107/client.zip';">10107</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10108/client.zip';">10108</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10109/client.zip';">10109</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10110/client.zip';">10110</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10111/client.zip';">10111</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10112/client.zip';">10112</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10113/client.zip';">10113</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10114/client.zip';">10114</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10115/client.zip';">10115</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10116/client.zip';">10116</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10117/client.zip';">10117</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10118/client.zip';">10118</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10119/client.zip';">10119</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10120/client.zip';">10120</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10121/client.zip';">10121</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10122/client.zip';">10122</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10123/client.zip';">10123</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10124/client.zip';">10124</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10125/client.zip';">10125</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10126/client.zip';">10126</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10127/client.zip';">10127</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/10128/client.zip';">10128</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/20048/engine2.zip';">20048</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/20049/engine2.zip';">20049</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/20050/engine2.zip';">20050</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/20051/engine2.zip';">20051</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/20052/engine2.zip';">20052</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/20053/engine2.zip';">20053</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/20054/engine2.zip';">20054</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/20055/engine2.zip';">20055</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/20056/engine2.zip';">20056</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/20057/engine2.zip';">20057</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/20058/engine2.zip';">20058</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/20059/engine2.zip';">20059</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/20060/engine2.zip';">20060</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/20061/engine2.zip';">20061</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/20062/engine2.zip';">20062</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/20063/engine2.zip';">20063</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/20064/engine2.zip';">20064</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/20065/engine2.zip';">20065</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/20066/engine2.zip';">20066</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/20067/engine2.zip';">20067</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/20068/engine2.zip';">20068</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/20069/engine2.zip';">20069</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/20070/engine2.zip';">20070</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/20071/engine2.zip';">20071</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/20072/engine2.zip';">20072</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/20073/engine2.zip';">20073</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/20074/engine2.zip';">20074</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/20075/engine2.zip';">20075</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/20076/engine2.zip';">20076</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/20077/engine2.zip';">20077</li>
+<li onclick="window.location.href = 'https://static.blockmango.net/client/20078/engine2.zip';">20078</li>
+
+    </ul>
+    <div class="cube-container" id="cube">
+        <div class="cube-face"></div>
+        <div class="cube-face"></div>
+        <div class="cube-face"></div>
+        <div class="cube-face"></div>
+        <div class="cube-face"></div>
+        <div class="cube-face"></div>
+    </div>
+</body>
+    <script>
+        document.addEventListener('contextmenu', function(event) {
+            event.preventDefault();
+            document.body.classList.add('custom-cursor');
+        });
+
+        document.addEventListener('click', function() {
+            document.body.classList.remove('right-click');
+        });
+    </script>
+</html>
