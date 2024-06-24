@@ -1,11 +1,25 @@
 html, body {
     margin: 0;
     height: 100%;
-    cursor: url('idle.cur'), auto; /* Укажите путь к вашему локальному файлу курсора */
+    cursor: url('idle.cur'), auto;
     font-family: Arial, sans-serif;
     display: flex;
+    overflow-y: scroll; 
     animation: fadeIn 0.5s ease-out;
 }
+
+body::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+@font-face {
+    font-family: 'HT14';
+    src: url('fonts/DroidSans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 @keyframes Test {
 	0%   { background: #333333; }
 	50%   { background: #3535a4; }
@@ -18,72 +32,106 @@ body {
 
 h1 {
 	font-family: Tahoma;
-    color: white; /* Делаем текст прозрачным */
-    justify-content: center; /* Центрируем по горизонтали */
-    align-items: center; /* Центрируем по вертикали */
-    text-align: center; /* Выравниваем текст по центру внутри блока */
-    font-size: 4em; /* Например, установить размер в 2 раза больше базового размера */
+    color: white; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    font-size: 4em; 
 }
 
 .large-image {
-    width: 120px; /* Установите ширину, которая увеличит изображение */
-    height: auto; /* Высота будет автоматически подстроена для сохранения пропорций */
+    width: 120px; 
+    height: auto; 
 }
 
+p4 {
+	display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .content-wrapper {
+        display: none;
+    }
+	body {
+		background: white;
+		width: 100%;
+	}
+    p4 {
+		opacity: 100;
+		color: red;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: absolute;
+        font-size: 20px; 
+    }
+}
+
+
 .mail {
-    position: absolute; /* Абсолютное позиционирование для текста */
-    bottom: 0; /* Выравниваем по нижнему краю */
-    right: 0; /* Выравниваем по правому краю */
-    cursor: url(select.cur), default;
-    width: 45px; /* Установите ширину, которая увеличит изображение */
-    height: auto; /* Высота будет автоматически подстроена для сохранения пропорций */
+    position: fixed;
+    top: 0; 
+    right: 0; 
+    cursor: url('select.cur'), default;
+    width: 45px;
+    height: auto;
 }
 
 h2 {
-    display: flex;
-    justify-content: center; /* Центрируем содержимое по горизонтали */
-    align-items: center; /* Центрируем содержимое по вертикали */
-    text-align: center; /* Выравниваем текст (если есть) по центру */
+    display: block;
+    justify-content: center; 
+    align-items: center;
+    text-align: center; 
 }
 
-/* Увеличить размер текста в p */
+.shiftBack.shifted2 {
+    font-size: 41px;
+    transition: font-size 0.1s ease-out;
+}
+
+.shiftBack.shifted1 {
+    font-size: 81px;
+    transition: font-size 0.1s ease-out;
+}
+
 p {
-	font-family: Tahoma;
-    color: #3efb0a; /* Делаем текст прозрачным */
+    font-family: 'HT14', sans-serif;
+    color: #3efb0a;
     text-shadow:
-        -1px -1px 0 #000, /* тень слева вверху */
-        1px -1px 0 #000, /* тень справа вверху */
-        -1px 1px 0 #000, /* тень слева внизу */
-        1px 1px 0 #000; /* тень справа внизу */
-    font-size: 28px; /* Например, установить размер 18 пикселей */
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    font-size: 28px; 
 }
 
 z1 {
-	font-family: Tahoma;
-    color: white; /* Делаем текст прозрачным */
+    font-family: 'HT14', sans-serif;
+    color: white;
     text-shadow:
-        -1px -1px 0 #000, /* тень слева вверху */
-        1px -1px 0 #000, /* тень справа вверху */
-        -1px 1px 0 #000, /* тень слева внизу */
-        1px 1px 0 #000; /* тень справа внизу */
-    font-size: 24px; /* Например, установить размер 18 пикселей */
+        -1px -1px 0 #000, 
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000; 
+    font-size: 24px; 
     display: block;
-    margin-bottom: 10px; /* Отступ между каждым сообщением */
-    border-bottom: 3px solid #1f2b45; /* Линия-разделитель */
-    padding-bottom: 5px; /* Отступ снизу от линии */
+    margin-bottom: 10px; 
+    border-bottom: 3px solid #1f2b45;
+    padding-bottom: 5px;
 }
 
 z2 {
 	font-family: Tahoma;
-    color: #ff0000; /* Делаем текст прозрачным */
+    color: #ff0000; 
     text-shadow:
-        -1px -1px 0 #000, /* тень слева вверху */
-        1px -1px 0 #000, /* тень справа вверху */
-        -1px 1px 0 #000, /* тень слева внизу */
-        1px 1px 0 #000; /* тень справа внизу */
-    font-size: 41px; /* Например, установить размер 18 пикселей */
-    margin-bottom: 15px; /* Отступ между каждым сообщением */
-    border-bottom: 5px solid #1f2b45; /* Линия-разделитель */
+        -1px -1px 0 #000, 
+        1px -1px 0 #000, 
+        -1px 1px 0 #000,
+        1px 1px 0 #000; 
+    font-size: 41px; 
+    margin-bottom: 15px;
+    border-bottom: 5px solid #1f2b45;
 }
 
 .sidebar {
@@ -112,7 +160,8 @@ z2 {
 }
 
 .sidebar-header {
-    font-size: 1em; /* Например, установить размер в 2 раза больше базового размера */
+    font-family: 'HT14', sans-serif;
+    font-size: 1em; 
     padding: 20px;
     background-color: #182541;
     display: flex;
@@ -138,11 +187,11 @@ z2 {
 .sidebar-menu li {
     cursor: url(select.cur), default;
     padding: 15px 20px;
-    border-bottom: 3px solid #182541; /* Рамка снизу */
+    border-bottom: 3px solid #182541;
 }
 
 .sidebar-menu li:first-child {
-    border-top: 3px solid #182541; /* Рамка сверху для первого пункта */
+    border-top: 3px solid #182541;
 }
 
 .sidebar-menu li a {
@@ -150,7 +199,7 @@ z2 {
     color: white;
     text-decoration: none;
     display: block;
-    background-color: #2d3e63; /* Задний фон */
+    background-color: #2d3e63; 
 }
 
 .sidebar-menu li a:hover {
@@ -180,6 +229,7 @@ z2 {
 }
 
 .open-btn.show {
+	position: fixed;
     cursor: url(select.cur), default;
     display: block;
 }
