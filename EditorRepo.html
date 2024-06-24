@@ -16,11 +16,16 @@
 			0% { opacity: 0; transform: translateY(-20px); }
 			100% { opacity: 1; transform: translateY(0); }
 		}
+		body::-webkit-scrollbar {
+			width: 0;
+			background: transparent;
+		}
         body {
 			-webkit-user-select: none;
 			-moz-user-select: none;
 			-ms-user-select: none;
 			user-select: none;
+		    overflow-y: scroll; 
             display: grid;
 			animation: Test 30s infinite linear;
             grid-template-columns: auto 1fr;
