@@ -79,7 +79,7 @@ p4 {
 }
 
 h2 {
-    display: block;
+    display: flex;
     justify-content: center; 
     align-items: center;
     text-align: center; 
@@ -102,7 +102,10 @@ p {
         -1px -1px 0 #000,
         1px -1px 0 #000,
         -1px 1px 0 #000,
-        1px 1px 0 #000;
+        1px 1px 0 #000,
+        0 0 5px #fff,
+        0 0 10px #00ff00,
+        0 0 10px #0066ff;
     font-size: 28px; 
 }
 
@@ -132,6 +135,13 @@ z2 {
     font-size: 41px; 
     margin-bottom: 15px;
     border-bottom: 5px solid #1f2b45;
+}
+
+.menu-icon {
+    width: 30px; /* Установите нужный размер иконки */
+    height: 30px; /* Установите нужный размер иконки */
+    margin-right: 10px; /* Отступ справа от иконки */
+    vertical-align: middle; /* Выравнивание по центру по вертикали */
 }
 
 .sidebar {
@@ -200,6 +210,8 @@ z2 {
     text-decoration: none;
     display: block;
     background-color: #2d3e63; 
+    position: relative; 
+    pointer-events: none;
 }
 
 .sidebar-menu li a:hover {
@@ -224,12 +236,11 @@ z2 {
     color: white;
     border: none;
     padding: 10px 20px;
-    cursor: pointer;
     font-size: 18px;
 }
 
 .open-btn.show {
-	position: fixed;
+	position: block;
     cursor: url(select.cur), default;
     display: block;
 }

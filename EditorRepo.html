@@ -57,21 +57,22 @@
             grid-column: 1 / -1;
             text-align: center;
             margin: 20px 0;
-			font-size: 6.5em
+			font-size: 4.5em;
             cursor: url(hand.cur), default;
         }
         h5 a {
 			animation: TextAnimation 5s infinite forwards;
-			font-size: 6.5em
+			font-size: 4.5em;
 			top: 0;
+			position: absolute;
 			left: 0;
             cursor: url(hand.cur), default;
         }
 		.top-left {
-			position: fixed;
+			position: block;
 			top: 0;
 			left: 0;
-			padding: 20px;
+			padding: 10px;
 		}
         ul {
             list-style-type: none;
@@ -152,9 +153,18 @@
             0% { transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg); }
             100% { transform: rotateY(360deg) rotateX(360deg) rotateZ(360deg); }
         }
+.loaded .Logo {
+    transform: scale(1); 
+}
+
+.Logo {
+    transform: scale(0); 
+    transition: transform 0.5s ease;
+}
     </style>
 </head>
 <body>
+    <h2><img class="Logo" src="Editor.ico" alt=""></h2>
 	<div class="top-left">
 	<h5><a href="index.html">Back>></a></h5>
 	</div>
@@ -441,8 +451,58 @@
 <li onclick="window.location.href = 'https://static.sandboxol.com/editorfile/editor/release/BlockmanEditor_1.5.621.zip';">Blockman Editor 1.5.621</li>
 <li onclick="window.location.href = 'https://static.sandboxol.com/editorfile/editor/release/BlockmanEditor_1.5.624.zip';">Blockman Editor 1.5.624</li>
 <li onclick="window.location.href = 'https://static.sandboxol.com/editorfile/editor/release/BlockmanEditor_1.5.625.zip';">Blockman Editor 1.5.625</li>
-
     </ul>
+    <h1>Blockman Editor Test Versions</h1>
+<ul>
+<li onclick="window.location.href = 'https://static.sandboxol.com/test/BlockmanEditorSetup_1.10.202.BVT1.20220616_80999_x64_update.zip';">Blockman Editor 1.10.202 (u) x64</li>
+<li onclick="window.location.href = 'https://static.sandboxol.com/test/BlockmanEditorSetup_1.11.659_70300_x64_20220914173813_update.zip';">Blockman Editor 1.11.659 (u) x64</li>
+<li onclick="window.location.href = 'https://static.sandboxol.com/test/BlockmanEditorSetup_1.11.700_80999_x64_20220921104750_update.zip';">Blockman Editor 1.11.700 (u) x64</li>
+<li onclick="window.location.href = 'https://static.sandboxol.com/test/BlockmanEditorSetup_1.11.716_80999_x64_20220923102628_update.zip';">Blockman Editor 1.11.716 (u) x64</li>
+<li onclick="window.location.href = 'https://static.sandboxol.com/test/BlockmanEditorSetup_1.11.765_80999_x64_20221009123109_update.zip';">Blockman Editor 1.11.765 (u) x64</li>
+<li onclick="window.location.href = 'https://static.sandboxol.com/test/BlockmanEditorSetup_1.12.167.alpha.CB17_80999_20220909105441_x64_update.zip';">Blockman Editor 1.12.167 (a/s/u) x64</li>
+<li onclick="window.location.href = 'https://static.sandboxol.com/test/BlockmanEditorSetup_1.12.167.alpha.CB17_80999_x64_update.zip';">Blockman Editor 1.12.167 (a/u) x64</li>
+<li onclick="window.location.href = 'https://static.sandboxol.com/test/BlockmanEditorSetup_1.12.169.alpha.CB17.1_80999_x64_20220913151933_update.zip';">Blockman Editor 1.12.169 (a/u) x64</li>
+<li onclick="window.location.href = 'https://static.sandboxol.com/test/BlockmanEditorSetup_1.12.180.alpha.CB18_80999_x64_20220920193115_update.zip';">Blockman Editor 1.12.180 (a/u) x64</li>
+<li onclick="window.location.href = 'https://static.sandboxol.com/test/BlockmanEditorSetup_1.12.182.alpha.CB19_80999_x64_20220923233953_update.zip';">Blockman Editor 1.12.182 (a/u) x64</li>
+<li onclick="window.location.href = 'https://static.sandboxol.com/test/BlockmanEditorSetup_1.13.108_20077_x64_20221011114058_update.zip';">Blockman Editor 1.13.108 (u) x64</li>
+<li onclick="window.location.href = 'https://static.sandboxol.com/test/BlockmanEditorSetup_1.13.291_20077_x64_20221114112801_update.zip';">Blockman Editor 1.13.291 (u) x64</li>
+
+<li onclick="window.location.href = 'https://static.sandboxol.com/test/BlockmanEditorSetup_1.4.688_70203_1_20210823164936.exe';">Blockman Editor 1.4.688</li>
+<li onclick="window.location.href = 'https://static.sandboxol.com/test/BlockmanEditorSetup_1.4.704.exe';">Blockman Editor 1.4.704</li>
+<li onclick="window.location.href = 'https://static.sandboxol.com/test/BlockmanEditorSetup_1.4.966.exe';">Blockman Editor 1.4.966</li>
+<li onclick="window.location.href = 'https://static.sandboxol.com/test/BlockmanEditorSetup_1.5.344_Win32_20211122122359790 (1).exe';">Blockman Editor 1.5.344 Win32</li>
+<li onclick="window.location.href = 'https://static.sandboxol.com/test/BlockmanEditorSetup_1.5.373_x64_20211124213311731.exe';">Blockman Editor 1.5.373 x64</li>
+<li onclick="window.location.href = 'https://static.sandboxol.com/test/BlockmanEditorSetup_1.5.400_70201_x86.exe';">Blockman Editor 1.5.400 x86</li>
+<li onclick="window.location.href = 'https://static.sandboxol.com/test/BlockmanEditorSetup_1.5.503_70203_x86_20211207112806.exe';">Blockman Editor 1.5.503 x86</li>
+
+<li onclick="window.location.href = 'https://static.sandboxol.com/test/BlockmanEditorSetup_1.5.684_70300_x86_20220105152612_update.zip';">Blockman Editor 1.5.684 (u) x86</li>
+
+<li onclick="window.location.href = 'https://static.sandboxol.com/test/BlockmanEditorSetup_1.5.728_70300_x64_20220108171402.exe';">Blockman Editor 1.5.728 x64</li>
+
+<li onclick="window.location.href = 'https://static.sandboxol.com/test/BlockmanEditorSetup_1.5.732_70300_x86_20220110114148.exe';">Blockman Editor 1.5.732 x86</li>
+<li onclick="window.location.href = 'https://static.sandboxol.com/test/BlockmanEditorSetup_1.5.958_70300_x86_20220301115331.exe';">Blockman Editor 1.5.958 x86</li>
+<li onclick="window.location.href = 'https://static.sandboxol.com/test/BlockmanEditorSetup_1.6.159_70300_x86_20220308101318.exe';">Blockman Editor 1.6.159 x86</li>
+
+<li onclick="window.location.href = 'https://static.sandboxol.com/test/BlockmanEditorSetup_1.6.221_70300_x64_20220315102547 (1).exe';">Blockman Editor 1.6.221 x64</li>
+
+<li onclick="window.location.href = 'https://static.sandboxol.com/test/BlockmanEditorSetup_1.6.234_70300_x86_20220315182014.zip';">Blockman Editor 1.6.234 x86</li>
+
+<li onclick="window.location.href = 'https://static.sandboxol.com/test/BlockmanEditorSetup_1.6.235_70300_x64_20220315182121.zip';">Blockman Editor 1.6.235 x64</li>
+<li onclick="window.location.href = 'https://static.sandboxol.com/test/BlockmanEditorSetup_1.7.139_70200_x64_20220412151034_update.zip';">Blockman Editor 1.7.139 (u) x64</li>
+
+<li onclick="window.location.href = 'https://static.sandboxol.com/test/BlockmanEditorSetup_1.7.163_70200_x86_20220414093012_update(1).zip';">Blockman Editor 1.7.163 (u/s) x86</li>
+<li onclick="window.location.href = 'https://static.sandboxol.com/test/BlockmanEditorSetup_1.7.163_70200_x86_20220414093012_update.zip';">Blockman Editor 1.7.163 (u) x86</li>
+<li onclick="window.location.href = 'https://static.sandboxol.com/test/BlockmanEditorSetup_1.7.196_70200_x86_20220415145911_update.zip';">Blockman Editor 1.7.196 (u) x86</li>
+
+<li onclick="window.location.href = 'https://static.sandboxol.com/test/BlockmanEditorSetup_1.7.247_70300_x64_20220421181503_update.zip';">Blockman Editor 1.7.247 (u) x64</li>
+<li onclick="window.location.href = 'https://static.sandboxol.com/test/BlockmanEditorSetup_1.9.386_80310_x64_20220609181719_update.zip';">Blockman Editor 1.9.386 (u) x64</li>
+<li onclick="window.location.href = 'https://static.sandboxol.com/test/BlockmanEditorSetup_1.9.451_80701_x64_20220616221712_update.zip';">Blockman Editor 1.9.451 (u) x64</li>
+<li onclick="window.location.href = 'https://static.sandboxol.com/test/BlockmanEditorSetup_1.9.452_80701_x64_20220617105126_update.zip';">Blockman Editor 1.9.452 (u) x64</li>
+
+<li onclick="window.location.href = 'https://static.sandboxol.com/test/BlockmanEditorSetup__1.5.576.exe';">Blockman Editor 1.5.576</li>
+<li onclick="window.location.href = 'https://static.sandboxol.com/test/BlockmanEditor_1.1.58.zip';">Blockman Editor 1.1.58</li>
+<li onclick="window.location.href = 'https://static.sandboxol.com/test/BlockmanEditor_1.1.59.zip';">Blockman Editor 1.1.59</li>
+</ul>
     <div class="cube-container" id="cube">
         <div class="cube-face"></div>
         <div class="cube-face"></div>
@@ -460,6 +520,11 @@
 
         document.addEventListener('click', function() {
             document.body.classList.remove('right-click');
+        });
+    </script>
+    <script>
+        window.addEventListener('load', function() {
+            document.body.classList.add('loaded');
         });
     </script>
 </html>

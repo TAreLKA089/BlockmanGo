@@ -57,21 +57,22 @@
             grid-column: 1 / -1;
             text-align: center;
             margin: 20px 0;
-			font-size: 6.5em
+			font-size: 4.5em;
             cursor: url(hand.cur), default;
         }
         h5 a {
 			animation: TextAnimation 5s infinite forwards;
-			font-size: 6.5em
+			font-size: 4.5em;
 			top: 0;
+			position: absolute;
 			left: 0;
             cursor: url(hand.cur), default;
         }
 		.top-left {
-			position: fixed;
+			position: block;
 			top: 0;
 			left: 0;
-			padding: 20px;
+			padding: 10px;
 		}
         ul {
             list-style-type: none;
@@ -149,9 +150,19 @@
             0% { transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg); }
             100% { transform: rotateY(360deg) rotateX(360deg) rotateZ(360deg); }
         }
+		
+.loaded .Logo {
+    transform: scale(1); 
+}
+
+.Logo {
+    transform: scale(0); 
+    transition: transform 0.5s ease;
+}
     </style>
 </head>
 <body>
+    <h2><img class="Logo" src="Blockman.ico" alt=""></h2>
 	<div class="top-left">
 	<h5><a href="index.html">Back>></a></h5>
 	</div>
@@ -264,6 +275,11 @@
 
         document.addEventListener('click', function() {
             document.body.classList.remove('right-click');
+        });
+    </script>
+    <script>
+        window.addEventListener('load', function() {
+            document.body.classList.add('loaded');
         });
     </script>
 </html>

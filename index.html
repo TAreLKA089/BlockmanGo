@@ -11,21 +11,21 @@
     <div class="content-wrapper">
         <div class="sidebar" id="sidebar">
             <div class="sidebar-header">
-                <h3>Menu</h3>
+                <h3><img src="Work!.gif" alt="" class="menu-icon">Menu</h3>
                 <button class="close-btn" id="close-btn">&times;</button>
             </div>
             <ul class="sidebar-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="EditorRepo.html">Blockman Editor Archive</a></li>
-                <li><a href="BMGOClientRepo.html">Blockman Go PC Client</a></li>
-                <li><a href="SandModEngineRepo.html">SandMod Engine</a></li>
+                <li id="home"><a href="index.html"><img src="logo.png" alt="" class="menu-icon"> Home</a></li>
+				<li id="editor"><a href="EditorRepo.html"><img src="Editor.ico" alt="" class="menu-icon"> Blockman Editor Archive</a></li>
+				<li id="client"><a href="BMGOClientRepo.html"><img src="Blockman.ico" alt="" class="menu-icon"> Blockman Go PC Client</a></li>
+				<li id="sandmod"><a href="SandModEngineRepo.html"><img src="SandModEditor.ico" alt="" class="menu-icon"> SandMod Engine</a></li>
             </ul>
         </div>
         <div class="content" id="content">
             <button class="open-btn" id="open-btn">&#9776; Open Menu</button>
             <h1 class="shiftBack" id="shiftBack">Blockman Go Archive</h1>
             <h2><img class="large-image" src="logo.png" alt=""></h2>
-            <p>Blockman Go Archive is an archive site developed by Ephargel Kel (John left project) to store old lost applications for the BMGO Community. 
+            <p>Blockman Go Archive is an archive site developed by Ephargel Kel and John Lasarev to store old lost applications for the BMGO Community. 
             This archive does not contain any applications with viruses, applications that steal data and others, everything is 100% safe.</p>
             <z style="display: block;">Click on the open menu to select what you want to find.</z>
             <z2 style="display: block;">ChangeLog:</z2>
@@ -39,5 +39,19 @@
     </div>
     <p4>Mobile Version Not Supported</p4>
     <script src="script.js"></script>
+<script>
+    document.getElementById('home').onclick = function() {
+        window.location.href = 'index.html';
+    };
+    document.getElementById('editor').onclick = function() {
+        window.location.href = 'EditorRepo.html';
+    };
+    document.getElementById('client').onclick = function() {
+        window.location.href = 'BMGOClientRepo.html';
+    };
+    document.getElementById('sandmod').onclick = function() {
+        window.location.href = 'SandModEngineRepo.html';
+    };
+</script>
 </body>
 </html>
